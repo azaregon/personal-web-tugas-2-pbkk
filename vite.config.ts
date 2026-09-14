@@ -10,7 +10,7 @@ import { defineConfig, lazyPlugins } from 'vite-plus';
 export default defineConfig({
     plugins: lazyPlugins(() => [
         laravel({
-            input: ['resources/css/app.css', 'resources/js/app.tsx', 'resources/js/pages/Home.tsx'],
+            input: ['resources/css/app.css', 'resources/js/app.tsx', 'resources/js/pages/Home.jsx'],
             refresh: true,
             fonts: [
                 bunny('Instrument Sans', {
