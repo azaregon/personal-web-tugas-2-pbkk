@@ -1,5 +1,9 @@
 import type { Auth } from '@/types/auth';
 
+declare global {
+    var route: (name: string, args?: unknown, options?: unknown) => string;
+}
+
 declare module 'react' {
     interface InputHTMLAttributes<T> {
         passwordrules?: string;
