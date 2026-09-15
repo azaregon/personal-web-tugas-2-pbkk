@@ -4,34 +4,60 @@ import { Link } from '@inertiajs/react';
 
 export default function Home() {
     return (
-        <MainLayout>
-            <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-8 max-w-3xl mx-auto mt-6">
-                <div className="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full mb-4">
-                    PBKK Pertemuan 2
-                </div>
-                <h2 className="text-3xl font-extrabold text-slate-900 mb-3">
-                    Selamat Datang di Portal Profile Akademis 🟦
-                </h2>
-                <p className="text-slate-600 leading-relaxed mb-6">
-                    Aplikasi ini merupakan sandbox untuk menguji arsitektur routing Laravel yang dipadukan dengan komponen UI modern React.
-                </p>
+        <MainLayout title="Home">
+            <div className="space-y-10">
+                <div className="relative overflow-hidden rounded-[28px] bg-gradient-to-br from-[#101B3D] to-[#1B2B57] px-8 py-12 sm:px-10">
+                    <div className="absolute -right-10 -top-10 w-52 h-52 rounded-full bg-[#1B8F82]/20 blur-3xl" />
+                    <div className="absolute -left-16 -bottom-16 w-48 h-48 rounded-full bg-[#D9A441]/10 blur-3xl" />
 
-                <div className="border-t border-slate-100 pt-6">
-                    <h3 className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-4">Pintas Navigasi Uji Rute</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <Link 
-                            href={route('mahasiswa.detail', { nrp: '5025201000' })}
-                            className="p-4 rounded-lg border border-slate-200 hover:border-blue-500 hover:shadow-md transition bg-slate-50 hover:bg-white"
+                    <div className="relative">
+                        <span className="inline-block text-xs font-semibold tracking-wide text-[#D9A441] mb-3">
+                            PBKK Pertemuan 2
+                        </span>
+                        <h1 className="font-['Fraunces'] text-4xl sm:text-5xl font-semibold text-white leading-tight max-w-lg mb-4">
+                            Portal Profil Akademis
+                        </h1>
+                        <div className="w-12 h-1 bg-[#1B8F82] rounded-full mb-5" />
+                        <p className="text-[#C7CEE0] max-w-md leading-relaxed">
+                            Sandbox untuk menguji arsitektur routing Laravel yang dipadukan dengan komponen UI React.
+                        </p>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 className="text-sm font-semibold text-[#6B7488] mb-4">Pintas navigasi</h2>
+                    <div className="grid sm:grid-cols-3 gap-4">
+                        <Link
+                            href={route('mahasiswa.detail', { nrp: '5025241142' })}
+                            className="group bg-white rounded-2xl border border-[#E4E8F0] p-6 shadow-[0_10px_30px_rgba(16,27,61,0.06)] hover:shadow-[0_16px_38px_rgba(16,27,61,0.12)] hover:-translate-y-0.5 transition-all duration-200"
                         >
-                            <span className="font-semibold text-blue-900 block">Profil Mahasiswa &rarr;</span>
-                            <span className="text-xs text-slate-500">Uji validasi Regex (10 Digit NRP)</span>
+                            <div className="w-11 h-11 rounded-xl bg-[#1B8F82]/10 text-[#157567] flex items-center justify-center font-['Fraunces'] font-semibold mb-4">
+                                ID
+                            </div>
+                            <h3 className="font-['Fraunces'] text-lg text-[#101B3D] mb-1">Profil Mahasiswa</h3>
+                            <p className="text-sm text-[#6B7488]">Validasi regex, 10 digit NRP</p>
                         </Link>
-                        <Link 
+
+                        <Link
                             href={route('agent.idea')}
-                            className="p-4 rounded-lg border border-slate-200 hover:border-blue-500 hover:shadow-md transition bg-slate-50 hover:bg-white"
+                            className="group bg-white rounded-2xl border border-[#E4E8F0] p-6 shadow-[0_10px_30px_rgba(16,27,61,0.06)] hover:shadow-[0_16px_38px_rgba(16,27,61,0.12)] hover:-translate-y-0.5 transition-all duration-200"
                         >
-                            <span className="font-semibold text-blue-900 block">Ide Platform Agentic AI &rarr;</span>
-                            <span className="text-xs text-slate-500">Uji parameter opsional & fallback</span>
+                            <div className="w-11 h-11 rounded-xl bg-[#D9A441]/10 text-[#B9862A] flex items-center justify-center font-['Fraunces'] font-semibold mb-4">
+                                AI
+                            </div>
+                            <h3 className="font-['Fraunces'] text-lg text-[#101B3D] mb-1">Ide Platform Agentic AI</h3>
+                            <p className="text-sm text-[#6B7488]">Parameter opsional dan fallback</p>
+                        </Link>
+
+                        <Link
+                            href={route('kalkulator.ipk')}
+                            className="group bg-white rounded-2xl border border-[#E4E8F0] p-6 shadow-[0_10px_30px_rgba(16,27,61,0.06)] hover:shadow-[0_16px_38px_rgba(16,27,61,0.12)] hover:-translate-y-0.5 transition-all duration-200"
+                        >
+                            <div className="w-11 h-11 rounded-xl bg-[#D9A441]/10 text-[#B9862A] flex items-center justify-center font-['Fraunces'] font-semibold mb-4">
+                                IPK
+                            </div>
+                            <h3 className="font-['Fraunces'] text-lg text-[#101B3D] mb-1">Kalkulator IPK</h3>
+                            <p className="text-sm text-[#6B7488]">Hitung rata-rata dua semester</p>
                         </Link>
                     </div>
                 </div>

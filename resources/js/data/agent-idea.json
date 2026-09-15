@@ -1,0 +1,20 @@
+{
+  "theme": "General Assistant Agent",
+  "title": "Platform Agentic AI",
+  "description": "Sistem ini dirancang menggunakan agen cerdas otonom yang dapat melakukan eksekusi tugas multi-step untuk otomatisasi alur kerja riset dan manajemen berkas akademis.",
+  "subtitle": "Proyeksi ide akhir semester",
+  "records": [
+    {
+      "name": "Agent Pencari Kerja",
+      "role": "Career Match Assistant",
+      "objective": "Membantu mahasiswa menemukan lowongan kerja yang sesuai dengan kompetensi, minat, dan profil akademiknya.",
+      "workflow": [
+        "Menganalisis CV dan portofolio mahasiswa",
+        "Mencocokkan skill dengan kebutuhan lowongan",
+        "Menyarankan perusahaan dan posisi yang relevan",
+        "Mengatur jadwal simulasi interview dan follow-up"
+      ],
+      "status": "ready"
+    }
+  ]
+}

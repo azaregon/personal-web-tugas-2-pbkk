@@ -20,7 +20,7 @@ Route::prefix('dashboard')->group(function () {
         ->name('agent.idea');
 
 
-    Route::get('/hitung-ipk/{ip1}/{ip2}', [AkademikController::class, 'hitungIpk'])
+    Route::get('/hitung-ipk/{ip1?}/{ip2?}', [AkademikController::class, 'hitungIpk'])
         ->where(['ip1' => '[0-9]+(\.[0-9]+)?', 'ip2' => '[0-9]+(\.[0-9]+)?'])
         ->name('kalkulator.ipk');
 });
